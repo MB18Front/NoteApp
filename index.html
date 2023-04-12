@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/main.tailwind.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <title> Note App </title>
+</head>
+
+<body class="m-0 p-0">
+
+  <div class="items-center fixed top-0 space-y-4 m-4 text-center">
+
+    <div class="bg-white">
+      <img src="./Svg/Logo.svg" alt="icon" class="w-10">
+    </div>
+
+    <div class="absolute right-0 z-10">
+      <button id="add-note" class="bg-transparent w-12 h-12 cursor-pointer border-dashed border-black outline-none rounded-md shadow-md transition hover:shadow-xl">
+      <ion-icon name="add-outline" size="large"></ion-icon>
+    </button>
+    </div>
+
+  </div>
+
+  <div  id="note-playground"  class="w-full min-h-screen flex flex-col justify-center items-center">
+    
+    <div id="note" class="w-2/3 h-max sm:w-1/4 bg-gray-200 py-4 px-4 rounded-md shadow-lg m-2 space-y-8">
+      <div id="note-Name" class="relative w-full flex p-1 items-center">
+        <span>
+          Welcome to NoteApp
+        </span>
+      </div>
+
+      <div class="bg-white border-dashed border-black rounded-md p-4 shadow-md">
+        This Note App was developed by Mobin Bordbari.
+        <br>
+        <br>
+        <span class="border-solid border-r-0 border-t-0 border-b-0 p-2 border-black"> Use & Enjoy 😁</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="bg-white fixed top-0 w-full h-screen flex justify-center items-center " id="add-note-popup">
+
+    <div class="w-72">
+      <p> Note Name </p>
+      <!-- <br> -->
+      <input id="note-name" type="text" value="" class="outline-none p-2 rounded-md shadow-md w-full border-dashed border-black">
+
+      <p>Note Content</p>
+      <div class="rounded-md p-2 w-full border-dashed border-black shadow-md">
+        <textarea id="note-content" cols="30" rows="10" value="" class="w-full h-full resize-none border-none outline-none"></textarea>
+      </div>
+
+      <div>
+        <p>Save:</p> <button id="save-note" class="p-2 rounded-md border-dashed border-black bg-transparent cursor-pointer shadow-md hover:shadow-xl transition">CTRL + C</button>
+        <p>Discard:</p> <button id="discard-note" class="p-2 rounded-md border-dashed border-black bg-transparent cursor-pointer shadow-md hover:shadow-xl transition">CTRL + Z</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./Javascript/source.js"></script>
+</body>
+</html>
